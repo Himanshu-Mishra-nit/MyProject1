@@ -1,0 +1,50 @@
+###############################---New_User_signup---##################
+drop table prj_sign_user;
+drop sequence singn_user_id; 
+create sequence singn_user_id start with 1001;
+create table prj_sign_user(
+user_name varchar2(30) not null, 
+mail_id varchar2(50) unique not null, 
+user_password varchar2(20) not null,
+user_phone varchar2(20) 
+); 
+insert into prj_sign_user(user_name,mail_id,user_password,user_phone)values('Himanshu','a@b.c','abc','12045');
+commit;
+describe prj_sign_user;
+select * from prj_sign_user;
+
+###############################---New_Property_Register---##################
+drop table prj_submit_property;
+create table prj_submit_property(
+ID number(10) unique,
+RoomType varchar2(50) not null, 
+Enviroment varchar2(50) not null, 
+LocalArea varchar2(50) not null, 
+Beds number(10) not null,
+Vhicle varchar2(50) not null, 
+Price number(10) not null, 
+Area number(10) not null,
+Book varchar2(10) not null, 
+Image blob  
+); 
+insert into prj_submit_property(ID,RoomType,Enviroment,LocalArea,Beds,Vhicle,Price,Area,Image,Book)values(1,'Room','Peace','market',1,'Bychycle',2000,120,'a.jpg','No);
+commit;
+describe prj_submit_property;
+select * from prj_submit_property;
+
+
+#############################--Register as Agent---########################
+drop table prj_register_agent;
+create table prj_register_agent(
+ID number(10) unique,
+name varchar2(50) not null,
+profession varchar2(50) not null,
+num varchar2(50) not null,
+email varchar2(50) not null,
+fb varchar2(100) not null,
+twitter varchar2(100) not null,
+insta varchar2(100) not null,
+image blob
+);
+insert into prj_register_agent(ID,name,profession,num,email,fb,twitter,insta,image)values(?,?,?,?,?,?,?,?,?);
+select * from prj_register_agent;

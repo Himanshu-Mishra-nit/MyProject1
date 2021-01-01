@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>s1</servlet-name>
+    <servlet-class>SignUpFormController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s1</servlet-name>
+    <url-pattern>/si</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>s2</servlet-name>
+    <servlet-class>SubmitPropertyServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s2</servlet-name>
+    <url-pattern>/submitproperty</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>s3</servlet-name>
+    <servlet-class>userDB</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>s3</servlet-name>
+    <url-pattern>/udb</url-pattern>
+  </servlet-mapping>
+</web-app>
